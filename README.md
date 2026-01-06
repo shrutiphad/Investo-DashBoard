@@ -1,8 +1,8 @@
-#Investo Dashboard – Frontend Project
+##Investo Dashboard – Frontend Project
 
 A modern, responsive investment dashboard frontend inspired by real-world trading platforms. This project focuses on complete frontend coverage, clean UI architecture, and reusable components.
 
-#Features
+##Features
 
 Dashboard layout with sidebar & top navigation
 
