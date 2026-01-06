@@ -1,0 +1,69 @@
+.apps-container {
+  padding: 24px;
+}
+
+.apps-subtitle {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.app-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 18px;
+  transition: box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-desc {
+  font-size: 14px;
+  color: #555;
+  margin: 12px 0 16px;
+}
+
+.status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.status.active {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.status.soon {
+  background: #fff4e5;
+  color: #b26a00;
+}
+
+.app-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background: #387ed1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.app-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
