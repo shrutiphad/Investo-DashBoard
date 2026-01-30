@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import { VerticalGraph } from "./VerticalGraph";
 
-// import { holdings } from "../data/data";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
@@ -18,15 +17,34 @@ const Holdings = () => {
   const labels = allHoldings.map((subArray) => subArray["name"]);
 
   const data = {
-    labels,
+    labels: ["HUL", "TCS", "INFY", "ONGC", "RELIANCE"],
     datasets: [
       {
         label: "Stock Price",
-        data: allHoldings.map((stock) => stock.price),
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        data: [512, 3800, 1490, 240, 2890],
+        backgroundColor: (context) => {
+          const chart = context.chart;
+          const { ctx, chartArea } = chart;
+  
+          if (!chartArea) return null;
+  
+          const gradient = ctx.createLinearGradient(
+            0,
+            chartArea.bottom,
+            0,
+            chartArea.top
+          );
+          gradient.addColorStop(0, "#E9ECFF");
+        gradient.addColorStop(1, "#C7D2FE");
+  
+          return gradient;
+        },
+        hoverBackgroundColor: "#4F46E5",
+        barThickness: 32,
       },
     ],
   };
+  
 
   // export const data = {
   //   labels,
